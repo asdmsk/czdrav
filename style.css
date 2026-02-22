@@ -182,3 +182,32 @@ footer {
     .container { padding: 30px 15px; }
     .info-card { padding: 20px; }
 }
+
+/* Стиль для всплывающего уведомления PWA */
+#pwa-install-banner {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--deep-blue);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 400px;
+}
+
+#pwa-install-banner button {
+    background: var(--accent-sky);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}

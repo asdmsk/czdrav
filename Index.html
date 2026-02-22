@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Центры Здоровья — Христианский здоровый образ жизни</title>
+    <meta name="description" content="Полный каталог 17 оздоровительных центров АСД. Христианские принципы здоровья, профилактика и отдых.">
+    <meta name="keywords" content="центры здоровья, АСД, здоровый образ жизни, Божий Дар, Восхождение, Вкус Жизни, ЗОЖ">
+    <link rel="canonical" href="https://czdrav.asdmsk.ru/">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e5a95">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -11,25 +26,77 @@
         ym(106917530, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/106917530" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Центры Здоровья — АСД</title>
-    
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #1e5a95;
+            --deep-blue: #0d3b66;
+            --accent-sky: #00a8e8;
+            --light-bg: #eef6fc;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(30, 90, 149, 0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { background-color: var(--light-bg); color: var(--deep-blue); line-height: 1.6; }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at top right, #d0e6f8 0%, #eef6fc 100%);
+            z-index: -1;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
+
+        header { text-align: center; margin-bottom: 40px; }
+        .main-logo { max-width: 130px; border: 4px solid var(--white); border-radius: 50%; box-shadow: var(--shadow); margin-bottom: 20px; }
+        h1 { color: var(--deep-blue); font-size: 2.3rem; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; }
+        .subtitle { font-size: 1.1rem; color: var(--primary-blue); font-weight: 500; }
+
+        .info-card {
+            background: var(--white); border-radius: 20px; padding: 25px; margin-bottom: 20px;
+            box-shadow: var(--shadow); border: 1px solid rgba(30, 90, 149, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .info-card:hover { transform: translateY(-5px); }
+        .info-card h3 { color: var(--primary-blue); margin-bottom: 10px; font-size: 1.5rem; }
+        .address-text { font-size: 0.95rem; margin-bottom: 15px; color: #4a6a8a; }
+
+        .contact-links { display: grid; gap: 10px; }
+        .contact-link { text-decoration: none; color: var(--deep-blue); display: flex; align-items: center; gap: 10px; font-weight: 600; }
+        .contact-link i { color: var(--accent-sky); width: 20px; }
+
+        .divider { text-align: center; margin: 40px 0; }
+        .divider span { background: var(--deep-blue); color: var(--white); padding: 8px 25px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; }
+
+        .btn-pdf {
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; padding: 20px; border-radius: 15px;
+            background: var(--primary-blue); color: var(--white);
+            font-weight: 700; font-size: 1.1rem; box-shadow: 0 8px 20px rgba(30, 90, 149, 0.3);
+            transition: 0.3s;
+        }
+
+        #pwa-install-banner {
+            display: none; position: fixed; bottom: 20px; left: 50%;
+            transform: translateX(-50%); background: var(--deep-blue);
+            color: white; padding: 15px 20px; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4); z-index: 1000;
+            align-items: center; gap: 15px; width: 90%; max-width: 400px;
+        }
+        #pwa-install-banner button { background: var(--accent-sky); border: none; color: white; padding: 8px 15px; border-radius: 10px; font-weight: bold; }
+
+        footer { text-align: center; margin-top: 50px; padding-bottom: 30px; color: var(--primary-blue); opacity: 0.7; }
+    </style>
 </head>
 <body>
     <div class="overlay"></div>
     <div class="container">
         
         <header>
-            <div class="logo-container">
-                <img src="logo.png" alt="Логотип" class="main-logo">
-            </div>
+            <img src="logo.png" alt="Логотип" class="main-logo">
             <h1>ЦЕНТРЫ ЗДОРОВЬЯ</h1>
-            <p class="subtitle">Путь к гармонии и долголетию</p>
+            <p class="subtitle">Христианский здоровый образ жизни</p>
         </header>
 
         <div class="info-card">
@@ -66,7 +133,7 @@
             <p class="address-text">Рязанская обл., Спасский р-н, с. Петровичи, ул. Лесная, 5</p>
             <div class="contact-links">
                 <a href="tel:+79109093841" class="contact-link"><i class="fas fa-phone-alt"></i><span>+7 (910) 909-38-41</span></a>
-                <a href="https://taplink.cc/petrovichi" target="_blank" class="contact-link"><i class="fas fa-globe"></i><span>https://taplink.cc/petrovichi</span></a>
+                <a href="https://Petrovichi-love.ru" target="_blank" class="contact-link"><i class="fas fa-globe"></i><span>Petrovichi-love.ru</span></a>
             </div>
         </div>
 
@@ -129,7 +196,7 @@
             <p class="address-text">Московская обл., д. Клемёново, ул. Новая, 27</p>
             <div class="contact-links">
                 <a href="tel:+79167340510" class="contact-link"><i class="fas fa-phone-alt"></i><span>+7 (916) 734-05-10</span></a>
-                <a href="https://www.vzmo.tilda.ws" target="_blank" class="contact-link"><i class="fas fa-globe"></i><span>vzmo.tilda.ws</span></a>
+                <a href="https://vzmo.tilda.ws" target="_blank" class="contact-link"><i class="fas fa-globe"></i><span>vzmo.tilda.ws</span></a>
             </div>
         </div>
 
@@ -188,8 +255,8 @@
 
         <div class="divider"><span>Дополнительно</span></div>
 
-        <a href="cz.pdf" class="btn" style="border: 2px solid #4682b4; background: #ffffff; color: #4682b4; justify-content: center; margin-bottom: 40px;" download>
-            <i class="fas fa-file-pdf" style="font-size: 1.5rem; margin-right: 15px;"></i> 
+        <a href="cz.pdf" class="btn-pdf" download>
+            <i class="fas fa-file-pdf" style="margin-right: 15px;"></i> 
             <span>СКАЧАТЬ БРОШЮРУ (PDF)</span>
         </a>
 
@@ -197,5 +264,37 @@
             <p>© 2026 Община на Стремянном</p>
         </footer>
     </div>
+
+    <div id="pwa-install-banner">
+        <span>Установить приложение?</span>
+        <button id="install-button">ДА</button>
+    </div>
+
+    <script>
+        let deferredPrompt;
+        const installBanner = document.getElementById('pwa-install-banner');
+        const installButton = document.getElementById('install-button');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBanner.style.display = 'flex';
+        });
+
+        installButton.addEventListener('click', () => {
+            installBanner.style.display = 'none';
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    ym(106917530, 'reachGoal', 'pwa_installed');
+                }
+                deferredPrompt = null;
+            });
+        });
+
+        window.addEventListener('appinstalled', () => {
+            installBanner.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
