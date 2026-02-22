@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Центры Здоровья — Христианский здоровый образ жизни</title>
-    <meta name="description" content="Полный каталог оздоровительных центров АСД. Христианские принципы здоровья, профилактика и отдых.">
+    <meta name="description" content="Полный каталог 17 оздоровительных центров АСД. Христианские принципы здоровья, профилактика и качественный отдых.">
     <meta name="keywords" content="центры здоровья, АСД, здоровый образ жизни, Божий Дар, Восхождение, Вкус Жизни, ЗОЖ">
     <link rel="canonical" href="https://czdrav.asdmsk.ru/">
+
+    <meta name="yandex-verification" content="ВАШ_КОД_ПОДТВЕРЖДЕНИЯ" />
+    <meta name="google-site-verification" content="Myo-nmvrokST_PmPN1--9Lf-5mmRiej1..." />
 
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#1e5a95">
@@ -16,20 +19,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-    ym(38401360, 'init', {clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/38401360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+        // Используем актуальный ID счетчика 106917530
+        ym(106917530, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106917530" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <style>
         :root {
             --primary-blue: #1e5a95;
@@ -87,7 +87,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.4); z-index: 1000;
             align-items: center; gap: 15px; width: 90%; max-width: 400px;
         }
-        #pwa-install-banner button { background: var(--accent-sky); border: none; color: white; padding: 8px 15px; border-radius: 10px; font-weight: bold; }
+        #pwa-install-banner button { background: var(--accent-sky); border: none; color: white; padding: 8px 15px; border-radius: 10px; font-weight: bold; cursor: pointer; }
 
         footer { text-align: center; margin-top: 50px; padding-bottom: 30px; color: var(--primary-blue); opacity: 0.7; }
     </style>
@@ -274,6 +274,16 @@
     </div>
 
     <script>
+        // 1. Регистрация Service Worker для PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SW registered'))
+                    .catch(err => console.log('SW error', err));
+            });
+        }
+
+        // 2. Логика кнопки установки
         let deferredPrompt;
         const installBanner = document.getElementById('pwa-install-banner');
         const installButton = document.getElementById('install-button');
@@ -286,13 +296,15 @@
 
         installButton.addEventListener('click', () => {
             installBanner.style.display = 'none';
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    ym(106917530, 'reachGoal', 'pwa_installed');
-                }
-                deferredPrompt = null;
-            });
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        ym(106917530, 'reachGoal', 'pwa_installed');
+                    }
+                    deferredPrompt = null;
+                });
+            }
         });
 
         window.addEventListener('appinstalled', () => {
@@ -300,5 +312,4 @@
         });
     </script>
 </body>
-
 </html>
