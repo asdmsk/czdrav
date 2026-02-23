@@ -1,4 +1,4 @@
-const CACHE_NAME = 'czdrav-cache-v1';
+const CACHE_NAME = 'czdrav-cache-v3';
 const urlsToCache = [
   './',
   './index.html',
@@ -22,4 +22,5 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request)
       .then((response) => response || fetch(event.request))
   );
+
 });
