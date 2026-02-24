@@ -265,9 +265,39 @@
             <span>СКАЧАТЬ БРОШЮРУ (PDF)</span>
         </a>
 
-        <footer>
-            <p>© 2026 Община на Стремянном</p>
-        </footer>
+        
+           <footer style="margin-top: 50px; padding: 30px 20px; text-align: center; color: #003366; font-size: 0.85rem; line-height: 1.6;">
+    
+    <div style="max-width: 800px; margin: 0 auto;">
+        <p style="color: #003366; margin-bottom: 15px;">
+            Если у вас появились какие-либо вопросы по работе определенного центра здоровья, вы можете задать свои вопросы, используя форму предварительной записи на странице интересующего вас центра здоровья.
+        </p>
+
+        <p style="margin-bottom: 20px;">
+            Для связи с администрацией сайта пишите на почту: 
+            <a href="mailto:info@czdrav.ru" style="color: #003366; text-decoration: underline; font-weight: bold;">info@czdrav.ru</a>
+        </p>
+
+        <p style="color: #003366; font-weight: bold; margin-bottom: 15px;">
+            © 2021–<span id="current-year"></span>, Центры здорового образа жизни
+        </p>
+
+        <div style="font-size: 0.75rem; color: #003366; opacity: 0.8; margin-top: 15px; padding-top: 15px;">
+            <p style="margin-bottom: 10px;">
+                Данный сайт посвящен Центрам здорового образа жизни на территории Российской Федерации.
+            </p>
+            <p>
+                Администрация сайта не несет ответственности за услуги, предоставляемые Центрами здоровья. Все представленные на сайте учреждения действуют, как отдельные самостоятельные организации.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+</footer>
+        
     </div>
 
     <div id="pwa-install-banner">
@@ -318,4 +348,5 @@
     </script>
 </body>
 </html>
+
 
