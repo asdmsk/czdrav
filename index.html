@@ -19,19 +19,16 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-    ym(38401360, 'init', {clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/38401360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+        ym(38401360, 'init', {clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/38401360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <style>
         :root {
             --primary-blue: #1e5a95;
@@ -91,7 +88,7 @@
         }
         #pwa-install-banner button { background: var(--accent-sky); border: none; color: white; padding: 8px 15px; border-radius: 10px; font-weight: bold; cursor: pointer; }
 
-        footer { text-align: center; margin-top: 50px; padding-bottom: 30px; color: var(--primary-blue); opacity: 0.7; }
+        footer { text-align: center; margin-top: 50px; padding: 30px 20px; color: var(--deep-blue); }
     </style>
 </head>
 <body>
@@ -265,39 +262,34 @@
             <span>СКАЧАТЬ БРОШЮРУ (PDF)</span>
         </a>
 
-        
-           <footer style="margin-top: 50px; padding: 30px 20px; text-align: center; color: #003366; font-size: 0.85rem; line-height: 1.6;">
-    
-    <div style="max-width: 800px; margin: 0 auto;">
-        <p style="color: #003366; margin-bottom: 15px;">
-            Если у вас появились какие-либо вопросы по работе определенного центра здоровья, вы можете задать свои вопросы, используя форму предварительной записи на странице интересующего вас центра здоровья.
-        </p>
+        <footer style="margin-top: 50px; padding: 40px 20px; text-align: center; color: var(--deep-blue); font-size: 0.85rem; line-height: 1.6; border-top: 1px solid rgba(13, 59, 102, 0.1);">
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 20px; opacity: 0.9;">
+                    Если у вас появились какие-либо вопросы по работе определенного центра здоровья, вы можете задать свои вопросы, используя форму предварительной записи на странице интересующего вас центра здоровья.
+                </p>
 
-        <p style="margin-bottom: 20px;">
-            Для связи с администрацией сайта пишите на почту: 
-            <a href="mailto:info@czdrav.ru" style="color: #003366; text-decoration: underline; font-weight: bold;">info@czdrav.ru</a>
-        </p>
+                <div style="margin-bottom: 25px;">
+                    <p style="color: #666; font-size: 0.8rem; margin-bottom: 5px;">Для связи с администрацией сайта:</p>
+                    <a href="mailto:info@czdrav.ru" style="color: var(--primary-blue); text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+                        <i class="fas fa-envelope"></i> info@czdrav.ru
+                    </a>
+                </div>
 
-        <p style="color: #003366; font-weight: bold; margin-bottom: 15px;">
-            © 2021–<span id="current-year"></span>, Центры здорового образа жизни
-        </p>
+                <p style="font-weight: bold; margin-bottom: 15px;">
+                    © 2021–<span id="current-year"></span> ЦЕНТРЫ ЗДОРОВЬЯ
+                </p>
 
-        <div style="font-size: 0.75rem; color: #003366; opacity: 0.8; margin-top: 15px; padding-top: 15px;">
-            <p style="margin-bottom: 10px;">
-                Данный сайт посвящен Центрам здорового образа жизни на территории Российской Федерации.
-            </p>
-            <p>
-                Администрация сайта не несет ответственности за услуги, предоставляемые Центрами здоровья. Все представленные на сайте учреждения действуют, как отдельные самостоятельные организации.
-            </p>
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-    
-</footer>
-        
+                <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 20px; padding-top: 20px; border-top: 1px dashed rgba(13, 59, 102, 0.2);">
+                    <p style="margin-bottom: 10px;">
+                        Данный сайт посвящен Центрам здорового образа жизни на территории Российской Федерации.
+                    </p>
+                    <p>
+                        Все указанные на сайте организации действуют как отдельные организации. Каждая организация несет самостоятельную ответственность за свою деятельность.
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <div id="pwa-install-banner">
@@ -306,16 +298,17 @@
     </div>
 
     <script>
-        // Регистрация Service Worker
+        // 1. Автоматический год
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 2. Регистрация Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => console.log('SW registered'))
-                    .catch(err => console.log('SW error', err));
+                navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW error', err));
             });
         }
 
-        // Логика кнопки установки PWA
+        // 3. Логика установки PWA
         let deferredPrompt;
         const installBanner = document.getElementById('pwa-install-banner');
         const installButton = document.getElementById('install-button');
@@ -331,11 +324,8 @@
             if (deferredPrompt) {
                 deferredPrompt.prompt();
                 deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        // Отправляем цель в метрику 38401360
-                        if (typeof ym === 'function') {
-                            ym(38401360, 'reachGoal', 'pwa_installed');
-                        }
+                    if (choiceResult.outcome === 'accepted' && typeof ym === 'function') {
+                        ym(38401360, 'reachGoal', 'pwa_installed');
                     }
                     deferredPrompt = null;
                 });
@@ -348,5 +338,3 @@
     </script>
 </body>
 </html>
-
-
